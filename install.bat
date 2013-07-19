@@ -1,0 +1,1 @@
+gacutil -i Microsoft.TeamFoundation.Build.Client.dll

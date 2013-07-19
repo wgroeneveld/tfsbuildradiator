@@ -1,0 +1,78 @@
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<style>
+
+body {
+	font-family: "Verdana";
+}
+
+#builds div h3 {
+	font-size: 36pt;
+}
+
+
+#builds div {
+	float: left;
+	border: 1px solid black;
+	margin: 10px;
+	width: 95%;
+	height: 30%;
+}
+</style>
+
+<script>
+$(function() {
+
+	var BUILDS = [ "CHC.CMR.CentralMailService (auto debug)", "CHP-1.x-DEV-DEBUG" ];
+
+	function parse(project) {
+		var color = "red";
+		if(project.Status === "Succeeded") {
+			color = "lightgreen";
+		}
+		
+		$("#builds").append(
+			$("<div/>")
+				.html("<h3>" + project.DefinitionName + "</h3><span class='time'>" + project.StartTime + "</span>")
+				.css("background-color", color)
+		);
+	}
+
+	
+	function getBuildStatus() {
+		$("#debug").html("updating...");
+		$("#builds").html("");
+	
+		$.getJSON("buildstatus.json", function(json) {
+			json.Projects.forEach(function(project) {
+				if(BUILDS.indexOf(project.DefinitionName) != -1) {
+					parse(project);
+				}
+			});
+			
+			$("#debug").html("");
+		});	
+	}
+
+	getBuildStatus();
+	
+});
+
+</script>
+
+</head>
+
+<body>
+
+<h3 id="debug">loading</h3>
+
+<div id="builds">
+
+</div>
+
+</body>
+
+</html>
