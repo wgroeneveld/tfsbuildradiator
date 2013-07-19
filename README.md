@@ -19,3 +19,16 @@ change which builds you wish to display in index.html (var BUILDS) -
 ```
 
 The JS file loops through all found projects and only displays those in the array (we use the same TFS server for multiple teams)
+
+## Installation
+
+You'll need MS' TFS client .NET DLL v11 installed. Use `gacutil` to deploy the provided dll - see install.bat in the gacutil dir.
+
+You'll also need to have python installed on the server PC.
+
+## Running
+
+Execute TfsJsonOutput.exe - it outputs "buildstatus.json" into the same directory. An example has been checked in. 
+Execute server.bat - it starts a simple server to serve index.html @ port 9000 (to be able to use `jQuery.getJSON()` locally)
+
+Done!
