@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfsCommunicator", "TfsCommu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfsJsonOutput", "TfsJsonOutput\TfsJsonOutput.csproj", "{4831DC6B-EF28-4E16-8009-EE4CAA71499E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TfsCommunicator.UnitTests", "TfsCommunicator.UnitTests\TfsCommunicator.UnitTests.csproj", "{342ECC77-2D98-463D-90B6-761CFA1FC715}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{4831DC6B-EF28-4E16-8009-EE4CAA71499E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4831DC6B-EF28-4E16-8009-EE4CAA71499E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4831DC6B-EF28-4E16-8009-EE4CAA71499E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{342ECC77-2D98-463D-90B6-761CFA1FC715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{342ECC77-2D98-463D-90B6-761CFA1FC715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{342ECC77-2D98-463D-90B6-761CFA1FC715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{342ECC77-2D98-463D-90B6-761CFA1FC715}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

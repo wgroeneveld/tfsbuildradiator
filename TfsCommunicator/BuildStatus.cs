@@ -1,8 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace TfsCommunicator
+﻿namespace TfsCommunicator
 {
+    #region
+
+    using System.Collections.Generic;
+
+    #endregion
+
     public class BuildStatus
     {
         public BuildStatus()

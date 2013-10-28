@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TfsJsonOutput")]
+[assembly: AssemblyTitle("TfsCommunicator.UnitTests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Cegekanv")]
-[assembly: AssemblyProduct("TfsJsonOutput")]
+[assembly: AssemblyProduct("TfsCommunicator.UnitTests")]
 [assembly: AssemblyCopyright("Copyright © Cegekanv 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a0d5f833-258c-49d7-a79d-bfe727717764")]
+[assembly: Guid("7dbae384-5f5e-4142-a4f4-8eda298ba5a9")]
 
 // Version information for an assembly consists of the following four values:
 //
