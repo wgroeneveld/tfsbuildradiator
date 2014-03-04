@@ -36,9 +36,10 @@ Go nuts.
 
 ## Installation
 
-You'll need MS' TFS client .NET DLL v11 installed. Use `gacutil` to deploy the provided dll - see install.bat in the gacutil dir.
+You'll need MS' TFS client .NET DLL v11 installed, which come supplied with Visual Studio 2012.
+Use `gacutil` to deploy the provided dll - see install.bat in the gacutil dir. The provided gacutil executable is ripped from .NET 4.0.
 
-You'll also need to have python installed on the server PC.
+You'll also need to have python 2 installed on the server PC.
 
 ## Running
 
@@ -47,7 +48,11 @@ Execute server.bat - it starts a simple server to serve index.html @ port 9000 (
 
 Done!
 
-### It doesn't work on my machine/browser!
+### The index.html file doesn't show anything in my browser!
 
 Could be. Chrome does not allow GET requests from another origin so running the index.html file locally without the server will result in this error: "Failed to load resource: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access. ". 
 There's a config flag in chrome that disables this error, or simply use the python server!
+
+### The server.bat file does not do anything!
+
+It uses python 2 to start a simple HTTP server (`python -m SimpleHTTPServer 9000`). If you have a newer version of python (3), the command is `python -m http.server` instead. 
