@@ -15,10 +15,24 @@ change your tfsServer URL in TfsJsonOutput/App.config.
 change which builds you wish to display in index.html (var BUILDS) - 
 
 ```javascript
- var BUILDS = [ "CHC.CMR.CentralMailService (auto debug)", "CHP-1.x-DEV-DEBUG" ];
+ radiator.getBuildStatus([ "CHC.CMR.CentralMailService (auto debug)", "CHP-1.x-DEV-DEBUG" ]);
 ```
 
 The JS file loops through all found projects and only displays those in the array (we use the same TFS server for multiple teams)
+
+### I don't like the colors
+
+Configurable in radiator.js:
+
+```javascript
+	var buildColors = {
+		"Succeeded": "lightgreen",
+		"PartiallySucceeded": "yellow",
+		"Failed": "red"
+	};
+```
+
+Go nuts.
 
 ## Installation
 
@@ -32,3 +46,8 @@ Execute TfsJsonOutput.exe - it outputs "buildstatus.json" into the same director
 Execute server.bat - it starts a simple server to serve index.html @ port 9000 (to be able to use `jQuery.getJSON()` locally)
 
 Done!
+
+### It doesn't work on my machine/browser!
+
+Could be. Chrome does not allow GET requests from another origin so running the index.html file locally without the server will result in this error: "Failed to load resource: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access. ". 
+There's a config flag in chrome that disables this error, or simply use the python server!
